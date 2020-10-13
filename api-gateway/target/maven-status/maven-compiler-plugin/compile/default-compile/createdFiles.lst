@@ -1,0 +1,8 @@
+com\assignment\apigateway\config\SwaggerConfig.class
+com\assignment\apigateway\AssignmentApiGatewayApplication.class
+com\assignment\apigateway\models\User.class
+com\assignment\apigateway\models\UserList.class
+com\assignment\apigateway\clients\UserClient.class
+com\assignment\apigateway\controllers\ErrorHandler.class
+com\assignment\apigateway\controllers\UserController.class
+com\assignment\apigateway\clients\UserClientImpl.class

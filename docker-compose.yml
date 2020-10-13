@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    depends_on:
+      - user-service
+    ports:
+      - 8080:8080
+    networks:
+      - my-network
+
+  user-service:
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile
+    container_name: user-service
+    ports:
+      - 8088:8088
+    depends_on:
+      - mongoDb
+    networks:
+      - my-network
+
+  mongoDb:
+    image: bitnami/mongodb
+    container_name: mongoDb
+    expose:
+      - "27017"
+    environment:
+      - MONGODB_DATABASE=my_db
+      - MONGODB_USERNAME=root
+      - MONGODB_PASSWORD=root
+    volumes:
+      - ./mongo-volume:/data/db
+    networks:
+      - my-network
+
+networks:
+  my-network:

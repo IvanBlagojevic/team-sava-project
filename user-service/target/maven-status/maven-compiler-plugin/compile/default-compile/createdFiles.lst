@@ -1,0 +1,13 @@
+com\assignment\service\UserService.class
+com\assignment\controllers\UserController.class
+com\assignment\comparators\UserComparator.class
+com\assignment\model\User.class
+com\assignment\service\SequenceGeneratorService.class
+com\assignment\repository\UserRepository.class
+com\assignment\service\impl\UserServiceImpl.class
+com\assignment\modelDb\DatabaseSequence.class
+com\assignment\modelDb\User.class
+com\assignment\config\SwaggerConfig.class
+com\assignment\UserServiceApplication.class
+com\assignment\controllers\ErrorHandler.class
+com\assignment\service\impl\SequenceGeneratorServiceImpl.class
